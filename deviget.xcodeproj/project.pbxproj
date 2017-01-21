@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C49116F1E33E1AF0066FF60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49116E1E33E1AF0066FF60 /* AppDelegate.swift */; };
+		2C4911741E33E1AF0066FF60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4911721E33E1AF0066FF60 /* Main.storyboard */; };
+		2C4911771E33E1AF0066FF60 /* deviget.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C4911751E33E1AF0066FF60 /* deviget.xcdatamodeld */; };
+		2C4911791E33E1AF0066FF60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4911781E33E1AF0066FF60 /* Assets.xcassets */; };
+		2C49117C1E33E1AF0066FF60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C49117A1E33E1AF0066FF60 /* LaunchScreen.storyboard */; };
+		2C4911951E33EC110066FF60 /* RedditListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4911941E33EC110066FF60 /* RedditListView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C49116B1E33E1AF0066FF60 /* deviget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deviget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C49116E1E33E1AF0066FF60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C4911731E33E1AF0066FF60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C4911761E33E1AF0066FF60 /* deviget.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = deviget.xcdatamodel; sourceTree = "<group>"; };
+		2C4911781E33E1AF0066FF60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C49117B1E33E1AF0066FF60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C49117D1E33E1AF0066FF60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C4911941E33EC110066FF60 /* RedditListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditListView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C4911681E33E1AF0066FF60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C4911621E33E1AE0066FF60 = {
+			isa = PBXGroup;
+			children = (
+				2C49116D1E33E1AF0066FF60 /* deviget */,
+				2C49116C1E33E1AF0066FF60 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C49116C1E33E1AF0066FF60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C49116B1E33E1AF0066FF60 /* deviget.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C49116D1E33E1AF0066FF60 /* deviget */ = {
+			isa = PBXGroup;
+			children = (
+				2C4911831E33E1C80066FF60 /* Utilities */,
+				2C4911851E33E1DB0066FF60 /* Modules */,
+				2C4911861E33E1E00066FF60 /* Models */,
+				2C4911841E33E1D00066FF60 /* Views */,
+				2C4911881E33E21D0066FF60 /* AppDelegate */,
+				2C4911871E33E1F40066FF60 /* Resources */,
+			);
+			path = deviget;
+			sourceTree = "<group>";
+		};
+		2C4911831E33E1C80066FF60 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		2C4911841E33E1D00066FF60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C4911721E33E1AF0066FF60 /* Main.storyboard */,
+				2C4911931E33EBD60066FF60 /* Reddit */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2C4911851E33E1DB0066FF60 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		2C4911861E33E1E00066FF60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2C4911871E33E1F40066FF60 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C49117A1E33E1AF0066FF60 /* LaunchScreen.storyboard */,
+				2C4911781E33E1AF0066FF60 /* Assets.xcassets */,
+				2C49117D1E33E1AF0066FF60 /* Info.plist */,
+				2C4911751E33E1AF0066FF60 /* deviget.xcdatamodeld */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2C4911881E33E21D0066FF60 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2C49116E1E33E1AF0066FF60 /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2C4911891E33E25A0066FF60 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				2C49118D1E33E2850066FF60 /* Factory */,
+				2C49118C1E33E2800066FF60 /* Router */,
+				2C49118B1E33E27B0066FF60 /* Presenter */,
+				2C49118A1E33E2710066FF60 /* View */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		2C49118A1E33E2710066FF60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C4911941E33EC110066FF60 /* RedditListView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2C49118B1E33E27B0066FF60 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		2C49118C1E33E2800066FF60 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		2C49118D1E33E2850066FF60 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		2C49118E1E33E2A10066FF60 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2C4911921E33E3C90066FF60 /* Factory */,
+				2C4911911E33E3C10066FF60 /* Router */,
+				2C4911901E33E3BB0066FF60 /* Presenter */,
+				2C49118F1E33E3560066FF60 /* View */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		2C49118F1E33E3560066FF60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2C4911901E33E3BB0066FF60 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		2C4911911E33E3C10066FF60 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		2C4911921E33E3C90066FF60 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		2C4911931E33EBD60066FF60 /* Reddit */ = {
+			isa = PBXGroup;
+			children = (
+				2C4911891E33E25A0066FF60 /* List */,
+				2C49118E1E33E2A10066FF60 /* Detail */,
+			);
+			name = Reddit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C49116A1E33E1AF0066FF60 /* deviget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C4911801E33E1AF0066FF60 /* Build configuration list for PBXNativeTarget "deviget" */;
+			buildPhases = (
+				2C4911671E33E1AF0066FF60 /* Sources */,
+				2C4911681E33E1AF0066FF60 /* Frameworks */,
+				2C4911691E33E1AF0066FF60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = deviget;
+			productName = deviget;
+			productReference = 2C49116B1E33E1AF0066FF60 /* deviget.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C4911631E33E1AE0066FF60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Pedro Luis Valdivieso";
+				TargetAttributes = {
+					2C49116A1E33E1AF0066FF60 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JCEYC37BLA;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2C4911661E33E1AE0066FF60 /* Build configuration list for PBXProject "deviget" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C4911621E33E1AE0066FF60;
+			productRefGroup = 2C49116C1E33E1AF0066FF60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C49116A1E33E1AF0066FF60 /* deviget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C4911691E33E1AF0066FF60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C49117C1E33E1AF0066FF60 /* LaunchScreen.storyboard in Resources */,
+				2C4911791E33E1AF0066FF60 /* Assets.xcassets in Resources */,
+				2C4911741E33E1AF0066FF60 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C4911671E33E1AF0066FF60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C4911951E33EC110066FF60 /* RedditListView.swift in Sources */,
+				2C4911771E33E1AF0066FF60 /* deviget.xcdatamodeld in Sources */,
+				2C49116F1E33E1AF0066FF60 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2C4911721E33E1AF0066FF60 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C4911731E33E1AF0066FF60 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C49117A1E33E1AF0066FF60 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C49117B1E33E1AF0066FF60 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C49117E1E33E1AF0066FF60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2C49117F1E33E1AF0066FF60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C4911811E33E1AF0066FF60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JCEYC37BLA;
+				INFOPLIST_FILE = deviget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ucv.deviget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2C4911821E33E1AF0066FF60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JCEYC37BLA;
+				INFOPLIST_FILE = deviget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ucv.deviget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C4911661E33E1AE0066FF60 /* Build configuration list for PBXProject "deviget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C49117E1E33E1AF0066FF60 /* Debug */,
+				2C49117F1E33E1AF0066FF60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C4911801E33E1AF0066FF60 /* Build configuration list for PBXNativeTarget "deviget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C4911811E33E1AF0066FF60 /* Debug */,
+				2C4911821E33E1AF0066FF60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2C4911751E33E1AF0066FF60 /* deviget.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C4911761E33E1AF0066FF60 /* deviget.xcdatamodel */,
+			);
+			currentVersion = 2C4911761E33E1AF0066FF60 /* deviget.xcdatamodel */;
+			path = deviget.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2C4911631E33E1AE0066FF60 /* Project object */;
+}
