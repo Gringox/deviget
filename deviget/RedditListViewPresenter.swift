@@ -12,6 +12,7 @@ class RedditListViewPresenter: NSObject, RedditListViewPresenterInterface {
     
     var view: RedditListViewInterface?
     var dataStore: PostDataStoreInterface?
+    var router: RedditListViewRouterInterface?
     
     // MARK: - Services
     
@@ -47,6 +48,28 @@ class RedditListViewPresenter: NSObject, RedditListViewPresenterInterface {
         cell.initCellWithPost(post: post)
         
         return cell
+    }
+    
+    // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    // MARK: - Routing
+    
+    internal func shouldPerformPostDetailSegue(sender: Any) -> Bool {
+        let tableView = self.view?.getUITableView()
+        let indexPath = tableView?.indexPath(for: sender as! UITableViewCell)
+        let post: RedditPost = (self.dataStore?.getPostAtIndex(index: indexPath!.row))!
+        return post.image != nil ? true : false
+    }
+    
+    internal func prepareForSegue(segue: UIStoryboardSegue, sender: Any) {
+        let tableView = self.view?.getUITableView()
+        let indexPath = tableView?.indexPath(for: sender as! UITableViewCell)
+        let post: RedditPost = (self.dataStore?.getPostAtIndex(index: indexPath!.row))!
+        self.router?.prepareForSegue(segue: segue, post: post)
     }
     
 }

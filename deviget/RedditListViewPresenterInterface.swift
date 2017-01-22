@@ -12,4 +12,8 @@ protocol RedditListViewPresenterInterface: UITableViewDataSource, UITableViewDel
     
     func loadPost()
     
+    func shouldPerformPostDetailSegue(sender: Any) -> Bool
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: Any)
+    
 }

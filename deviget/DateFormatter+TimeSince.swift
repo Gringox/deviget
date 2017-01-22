@@ -20,7 +20,6 @@ extension DateFormatter {
     func timeSince(from: NSDate, numericDates: Bool = false) -> String {
         let calendar = Calendar.current
         let now = NSDate()
-        print("now date: ", now)
         let earliest = now.earlierDate(from as Date)
         let latest = earliest == now as Date ? from : now
         let components = calendar.dateComponents([.year,
