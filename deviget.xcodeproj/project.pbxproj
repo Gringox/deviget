@@ -28,6 +28,7 @@
 		2C4911BA1E3451320066FF60 /* PostFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4911B91E3451320066FF60 /* PostFactory.swift */; };
 		2C4911BE1E345F640066FF60 /* UIImageView+URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4911BD1E345F640066FF60 /* UIImageView+URLImage.swift */; };
 		2C4911C01E3465030066FF60 /* speech_bubble_dark_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4911BF1E3465030066FF60 /* speech_bubble_dark_orange.png */; };
+		2C4911C31E3535580066FF60 /* DateFormatter+TimeSince.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4911C21E3535580066FF60 /* DateFormatter+TimeSince.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		2C4911B91E3451320066FF60 /* PostFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFactory.swift; sourceTree = "<group>"; };
 		2C4911BD1E345F640066FF60 /* UIImageView+URLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+URLImage.swift"; sourceTree = "<group>"; };
 		2C4911BF1E3465030066FF60 /* speech_bubble_dark_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speech_bubble_dark_orange.png; sourceTree = "<group>"; };
+		2C4911C21E3535580066FF60 /* DateFormatter+TimeSince.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+TimeSince.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +341,7 @@
 		2C4911BB1E345F310066FF60 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2C4911C11E3535340066FF60 /* DateFormatter+TimeSince */,
 				2C4911BC1E345F410066FF60 /* UIImageView+URLImage */,
 			);
 			name = Extensions;
@@ -350,6 +353,14 @@
 				2C4911BD1E345F640066FF60 /* UIImageView+URLImage.swift */,
 			);
 			name = "UIImageView+URLImage";
+			sourceTree = "<group>";
+		};
+		2C4911C11E3535340066FF60 /* DateFormatter+TimeSince */ = {
+			isa = PBXGroup;
+			children = (
+				2C4911C21E3535580066FF60 /* DateFormatter+TimeSince.swift */,
+			);
+			name = "DateFormatter+TimeSince";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +446,7 @@
 				2C4911B51E344D3F0066FF60 /* PostDataStore.swift in Sources */,
 				2C49119B1E34047E0066FF60 /* RedditListViewInterface.swift in Sources */,
 				2C4911951E33EC110066FF60 /* RedditListView.swift in Sources */,
+				2C4911C31E3535580066FF60 /* DateFormatter+TimeSince.swift in Sources */,
 				2C4911B31E343DDE0066FF60 /* RedditPost.swift in Sources */,
 				2C4911771E33E1AF0066FF60 /* deviget.xcdatamodeld in Sources */,
 				2C4911B11E343D190066FF60 /* AppDefaults.swift in Sources */,
