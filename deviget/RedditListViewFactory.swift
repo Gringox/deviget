@@ -18,7 +18,12 @@ class RedditListViewFactory: NSObject {
         let presenter: RedditListViewPresenter = RedditListViewPresenter()
         presenter.view = view
         presenter.dataStore = PostFactory.initPostModule()
+        presenter.router = RedditListViewFactory.initRouter()
         return presenter as RedditListViewPresenterInterface
+    }
+    
+    private class func initRouter() -> RedditListViewRouterInterface {
+        return RedditListViewRouter() as RedditListViewRouterInterface
     }
 
 }

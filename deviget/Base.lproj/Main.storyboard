@@ -118,6 +118,7 @@
                                             <outlet property="numberOfCommentsLabel" destination="gm4-yb-3J7" id="PCH-Rb-Id5"/>
                                             <outlet property="thumbnailImageView" destination="5aj-0l-Kmu" id="hlV-rp-bgx"/>
                                             <outlet property="titleLabel" destination="W5G-4b-H9Y" id="Iyy-aN-aYw"/>
+                                            <segue destination="9UV-fh-pXq" kind="show" identifier="postDetailSegue" id="MSG-mM-hqZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -139,6 +140,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="120.8" y="138.98050974512745"/>
+        </scene>
+        <!--Reddit Detail View-->
+        <scene sceneID="XJA-r5-46n">
+            <objects>
+                <viewController storyboardIdentifier="RedditDetailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9UV-fh-pXq" customClass="RedditDetailView" customModule="deviget" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZE5-F9-XRV"/>
+                        <viewControllerLayoutGuide type="bottom" id="dXg-p1-Ldp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q46-nl-BYY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reddit_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="RGH-DU-sUa">
+                                <rect key="frame" x="62" y="208" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Nkv-2I-7eh"/>
+                                    <constraint firstAttribute="width" constant="250" id="jk4-hd-sWB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RGH-DU-sUa" firstAttribute="centerX" secondItem="q46-nl-BYY" secondAttribute="centerX" id="oNX-3G-CpR"/>
+                            <constraint firstItem="RGH-DU-sUa" firstAttribute="centerY" secondItem="q46-nl-BYY" secondAttribute="centerY" id="qqN-vG-rTF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="RGH-DU-sUa" id="xcf-KF-qOh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fnA-K6-5H1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="139"/>
         </scene>
     </scenes>
     <resources>

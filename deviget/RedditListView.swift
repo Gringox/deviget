@@ -12,7 +12,6 @@ class RedditListView: UIViewController, RedditListViewInterface {
     
     @IBOutlet weak private var tableView: UITableView!
     
-    // MARK: - VIPER
     var presenter: RedditListViewPresenterInterface?
 
     override func viewDidLoad() {
@@ -29,7 +28,7 @@ class RedditListView: UIViewController, RedditListViewInterface {
         self.presenter?.loadPost()
     }
     
-    // MARK: View Getters & Setters
+    // MARK: - View Getters & Setters
     
     internal func viewController() -> UIViewController {
         return self
@@ -37,6 +36,22 @@ class RedditListView: UIViewController, RedditListViewInterface {
     
     internal func getUITableView() -> UITableView {
         return self.tableView
+    }
+    
+    // MARK: - Routing
+    
+    override func shouldPerformSegue(withIdentifier identifier: String,
+                                     sender: Any?) -> Bool {
+        if identifier == "postDetailSegue" {
+            return (self.presenter?.shouldPerformPostDetailSegue(sender: sender as Any))!
+        }
+        return false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "postDetailSegue" {
+            self.presenter?.prepareForSegue(segue: segue, sender: sender as Any)
+        }
     }
 
 }
