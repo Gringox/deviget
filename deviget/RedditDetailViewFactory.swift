@@ -17,7 +17,12 @@ class RedditDetailViewFactory: NSObject {
     private class func initPresenter(view: RedditDetailViewInterface) -> RedditDetailViewPresenterInterface {
         let presenter = RedditDetailViewPresenter()
         presenter.view = view
+        presenter.router = RedditDetailViewFactory.initRouter()
         return presenter as RedditDetailViewPresenterInterface
+    }
+    
+    private class func initRouter() -> RedditDetailViewRouterInterface {
+        return RedditDetailViewRouter() as RedditDetailViewRouterInterface
     }
 
 }

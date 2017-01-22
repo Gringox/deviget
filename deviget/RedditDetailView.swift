@@ -36,4 +36,8 @@ class RedditDetailView: UIViewController, RedditDetailViewInterface {
         return self.imageView
     }
 
+    @IBAction func imageViewWasLongPressed(_ sender: UILongPressGestureRecognizer) {
+        self.presenter?.imageViewWasLongPressed()
+    }
+    
 }

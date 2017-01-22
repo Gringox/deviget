@@ -153,16 +153,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reddit_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="RGH-DU-sUa">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reddit_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="RGH-DU-sUa">
                                 <rect key="frame" x="62" y="208" width="250" height="250"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="Nkv-2I-7eh"/>
                                     <constraint firstAttribute="width" constant="250" id="jk4-hd-sWB"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Lpx-Ht-7EC" appends="YES" id="PFY-ec-cC7"/>
+                                </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press and hold to save photo!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HF6-tD-TjG">
+                                <rect key="frame" x="16" y="179" width="343" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="HF6-tD-TjG" firstAttribute="leading" secondItem="q46-nl-BYY" secondAttribute="leadingMargin" id="3kd-U7-KV8"/>
+                            <constraint firstItem="HF6-tD-TjG" firstAttribute="trailing" secondItem="q46-nl-BYY" secondAttribute="trailingMargin" id="HBv-KG-h4W"/>
+                            <constraint firstItem="RGH-DU-sUa" firstAttribute="top" secondItem="HF6-tD-TjG" secondAttribute="bottom" constant="8" symbolic="YES" id="Lug-Ev-NTY"/>
+                            <constraint firstItem="HF6-tD-TjG" firstAttribute="centerX" secondItem="RGH-DU-sUa" secondAttribute="centerX" id="jZ6-uC-VfO"/>
                             <constraint firstItem="RGH-DU-sUa" firstAttribute="centerX" secondItem="q46-nl-BYY" secondAttribute="centerX" id="oNX-3G-CpR"/>
                             <constraint firstItem="RGH-DU-sUa" firstAttribute="centerY" secondItem="q46-nl-BYY" secondAttribute="centerY" id="qqN-vG-rTF"/>
                         </constraints>
@@ -172,8 +186,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnA-K6-5H1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Lpx-Ht-7EC">
+                    <connections>
+                        <action selector="imageViewWasLongPressed:" destination="9UV-fh-pXq" id="eHv-Cl-kIb"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1042" y="139"/>
+            <point key="canvasLocation" x="1040.8" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>
