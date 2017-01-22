@@ -8,10 +8,24 @@
 
 import UIKit
 
-class RedditListView: UIViewController {
+class RedditListView: UIViewController, RedditListViewInterface {
+    
+    @IBOutlet weak private var tableView: UITableView!
+    
+    // MARK: - VIPER
+    var presenter: RedditListViewPresenterInterface?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Init VIPER
+        RedditListViewFactory.initVIPERFor(view: self)
+        
+        self.tableView.dataSource = self.presenter
+        self.tableView.delegate = self.presenter
+        
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 140
     }
 
 }
