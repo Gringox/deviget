@@ -6,8 +6,12 @@
 //  Copyright © 2017 Pedro Luis Valdivieso. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol RedditListViewInterface {
+    
+    func viewController() -> UIViewController
+    
+    func getUITableView() -> UITableView
     
 }

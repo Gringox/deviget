@@ -1,5 +1,5 @@
 //
-//  RedditListViewPresenterInterface.swift
+//  AppDefaults.swift
 //  deviget
 //
 //  Created by Pedro Luis Valdivieso on 1/21/17.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-protocol RedditListViewPresenterInterface: UITableViewDataSource, UITableViewDelegate {
+class AppDefaults: NSObject {
     
-    func loadPost()
+    static let API_URL = "https://www.reddit.com/"
     
+    static let LIMIT = 25
+
 }

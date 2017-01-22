@@ -11,13 +11,29 @@ import UIKit
 class RedditListViewPresenter: NSObject, RedditListViewPresenterInterface {
     
     var view: RedditListViewInterface?
+    var dataStore: PostDataStoreInterface?
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    // MARK: - Services
+    
+    internal func loadPost() {
+    
+        let success = {() -> () in
+            DispatchQueue.main.async {
+                self.view?.getUITableView().reloadData()
+            }
+        }
+        
+        let failure = {() -> () in
+            // Show some alert
+        }
+        
+        self.dataStore?.loadPosts(successCallback: success, failureCallback: failure)
     }
     
+    // MARK: - UITableViewDataSource
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return (self.dataStore?.getNumberOfPosts())!
     }
     
     func tableView(_ tableView: UITableView,
@@ -27,11 +43,8 @@ class RedditListViewPresenter: NSObject, RedditListViewPresenterInterface {
             .dequeueReusableCell(withIdentifier: String(describing: RedditListViewCell.self),
                                  for: indexPath) as! RedditListViewCell
         
-        if indexPath.row % 2 == 0 {
-            cell.titleLabel.text = "mjincdrtijnmoincdrtijmiudsfivjaiflnefivibhveibubiubiveuvebivebiybeivybilvbiuvibv;jfvkbjfvkbjlvkblfvbklvbkjdvbkjvkbjvkbjfvkbjlvbjkdvkbjfvjbkfbjkfkbjvjkbvkjbdvkbjdvkbjdvkbjldvkbjfvkbjavvkdvkbjadvbjkdvkbjdvkbjfvbkjfvkbjvbkfvbkljvbkjladfvbkadflbvkjladfbvkjdfablvkjdabflkvbkadfbvklblkadfbvlkadfjvadfjkbvkadfbvkbdfvjadfbvkadbfvjkadfbvadfjbvkjadfbvkjdafbvkjdfbjvdbvkbdjkvbdkbvadfjkbvkjadfbvkjadbvkjdabvkjdabvkldjabvkjladfbvkjadfbvkjadfbvkjadfbvjkadfbvkjdfbvjkbdakbvkjadbvjkdafbkvjbadfvkjdfbvkljadbvkljadbvkjladfbvjkbdkjvbkjadfbvkjadbkvjbadbvklabdjkvbadlkvbkadbvjkadfbvkljadfbvkladfbvkjldfvbkjdfbv"
-        }else{
-            cell.titleLabel.text = "Title"
-        }
+        let post: RedditPost = (self.dataStore?.getPostAtIndex(index: indexPath.row))!
+        cell.initCellWithPost(post: post)
         
         return cell
     }
