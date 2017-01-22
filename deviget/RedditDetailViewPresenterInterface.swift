@@ -12,4 +12,6 @@ protocol RedditDetailViewPresenterInterface {
     
     func setImageForUIImageView()
     
+    func imageViewWasLongPressed()
+        
 }
