@@ -16,9 +16,13 @@ class RedditListViewCell: UITableViewCell {
     @IBOutlet weak var authorAndDateLabel: UILabel!
     
     func initCellWithPost(post: RedditPost) {
-        self.authorAndDateLabel.text = "by " + post.author!
+        
         self.titleLabel.text = post.title
         self.numberOfCommentsLabel.text = "\(post.numberOfComments!)"
+        
+        let dateFormatter = DateFormatter()
+        let date = dateFormatter.timeSince(from: post.date! as NSDate, numericDates: true)
+        self.authorAndDateLabel.text = "by " + post.author! + " - " + date
         
         if let thumbnail = post.thumbnail {
             self.thumbnailImageView.downloadedFrom(link: thumbnail)
