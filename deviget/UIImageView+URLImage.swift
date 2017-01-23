@@ -2,8 +2,8 @@
 //  UIImageView+URLImage.swift
 //  deviget
 //
-//  Created by Pedro Luis Valdivieso on 1/21/17.
-//  Copyright © 2017 Pedro Luis Valdivieso. All rights reserved.
+//  Created by Leo Dabus on 12/30/14.
+//  Source: http://stackoverflow.com/questions/24231680/loading-downloading-image-from-url-on-swift
 //
 
 import UIKit
