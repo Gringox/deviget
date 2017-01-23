@@ -19,6 +19,25 @@ class RedditDetailView: UIViewController, RedditDetailViewInterface {
     override func viewDidLoad() {
         super.viewDidLoad()
         RedditDetailViewFactory.initVIPERForRedditDetailView(view: self)
+        if self.imageUrl != nil {
+            self.presenter?.setImageForUIImageView()
+        }
+    }
+    
+    override func encodeRestorableState(with coder: NSCoder) {
+        if let imageUrl = self.imageUrl {
+            coder.encode(imageUrl, forKey: "imageUrl")
+        }
+        super.encodeRestorableState(with: coder)
+    }
+    
+    override func decodeRestorableState(with coder: NSCoder) {
+        self.imageUrl = coder.decodeObject(forKey: "imageUrl") as! String?
+        super.decodeRestorableState(with: coder)
+    }
+    
+    override func applicationFinishedRestoringState() {
+        guard self.imageUrl != nil else { return }
         self.presenter?.setImageForUIImageView()
     }
     
