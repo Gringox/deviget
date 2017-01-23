@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="kLa-iO-hXU">
             <objects>
-                <navigationController id="UPe-h0-njc" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="UINavigationController" id="UPe-h0-njc" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pgj-yu-pyJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

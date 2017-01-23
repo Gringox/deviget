@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol RedditDetailViewInterface {
+protocol RedditDetailViewInterface: UIStateRestoring {
     
     func viewController() -> UIViewController
     
