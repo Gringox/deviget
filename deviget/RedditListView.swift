@@ -25,7 +25,7 @@ class RedditListView: UIViewController, RedditListViewInterface {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 120
         
-        self.presenter?.loadPost()
+        self.presenter?.loadPosts()
     }
     
     // MARK: - View Getters & Setters

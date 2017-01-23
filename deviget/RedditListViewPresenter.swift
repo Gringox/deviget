@@ -16,7 +16,7 @@ class RedditListViewPresenter: NSObject, RedditListViewPresenterInterface {
     
     // MARK: - Services
     
-    internal func loadPost() {
+    internal func loadPosts() {
     
         let success = {() -> () in
             DispatchQueue.main.async {
@@ -25,10 +25,23 @@ class RedditListViewPresenter: NSObject, RedditListViewPresenterInterface {
         }
         
         let failure = {() -> () in
-            // Show some alert
+            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+            alert.title = "Oops"
+            alert.message = "There was an error loading Reddit posts"
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            self.router?.presentVC(toVC: alert, fromVC: (self.view?.viewController())!)
         }
         
         self.dataStore?.loadPosts(successCallback: success, failureCallback: failure)
+    }
+    
+    private func paginate(itemNumber: Int) {
+        let currentNumberOfPost = (self.dataStore?.getNumberOfPosts())!
+        if itemNumber == currentNumberOfPost - 1 {
+            if AppDefaults.MAX_NUMBER_OF_POSTS > currentNumberOfPost { // 50 posts tops
+                self.loadPosts()
+            }
+        }
     }
     
     // MARK: - UITableViewDataSource
@@ -46,6 +59,8 @@ class RedditListViewPresenter: NSObject, RedditListViewPresenterInterface {
         
         let post: RedditPost = (self.dataStore?.getPostAtIndex(index: indexPath.row))!
         cell.initCellWithPost(post: post)
+        
+        self.paginate(itemNumber: indexPath.row)
         
         return cell
     }

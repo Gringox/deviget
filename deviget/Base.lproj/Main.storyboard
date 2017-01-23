@@ -76,6 +76,9 @@
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="speech_bubble_dark_orange.png" translatesAutoresizingMaskIntoConstraints="NO" id="YI2-GR-aYb">
                                                             <rect key="frame" x="0.0" y="-176.5" width="16" height="368"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="oZo-24-kO0"/>
+                                                            </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gm4-yb-3J7">
                                                             <rect key="frame" x="25" y="-176.5" width="29" height="368"/>

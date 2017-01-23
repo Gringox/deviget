@@ -12,4 +12,6 @@ protocol RedditListViewRouterInterface {
     
     func prepareForSegue(segue: UIStoryboardSegue, post: RedditPost)
     
+    func presentVC(toVC: UIViewController, fromVC: UIViewController)
+    
 }
