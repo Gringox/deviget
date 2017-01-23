@@ -12,6 +12,8 @@ class AppDefaults: NSObject {
     
     static let API_URL = "https://www.reddit.com/"
     
-    static let LIMIT = 25
+    static let LIMIT = 10
+    
+    static let MAX_NUMBER_OF_POSTS = 50
 
 }

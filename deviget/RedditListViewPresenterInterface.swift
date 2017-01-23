@@ -10,7 +10,7 @@ import UIKit
 
 protocol RedditListViewPresenterInterface: UITableViewDataSource, UITableViewDelegate {
     
-    func loadPost()
+    func loadPosts()
     
     func shouldPerformPostDetailSegue(sender: Any) -> Bool
     

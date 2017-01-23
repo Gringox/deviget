@@ -17,6 +17,8 @@ class RedditListViewCell: UITableViewCell {
     
     func initCellWithPost(post: RedditPost) {
         
+        self.thumbnailImageView.image = UIImage(named: "reddit_logo.png")
+        
         self.titleLabel.text = post.title
         self.numberOfCommentsLabel.text = "\(post.numberOfComments!)"
         

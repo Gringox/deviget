@@ -14,5 +14,9 @@ class RedditListViewRouter: NSObject, RedditListViewRouterInterface {
         let toVC = segue.destination as! RedditDetailView
         toVC.imageUrl = post.image
     }
+    
+    internal func presentVC(toVC: UIViewController, fromVC: UIViewController) {
+        fromVC.present(toVC, animated: true, completion: nil)
+    }
 
 }
