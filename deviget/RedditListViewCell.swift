@@ -24,7 +24,7 @@ class RedditListViewCell: UITableViewCell {
         
         let dateFormatter = DateFormatter()
         let date = dateFormatter.timeSince(from: post.date! as NSDate, numericDates: true)
-        self.authorAndDateLabel.text = "by " + post.author! + " - " + date
+        self.authorAndDateLabel.text = date + " by " + post.author!
         
         if let thumbnail = post.thumbnail {
             self.thumbnailImageView.downloadedFrom(link: thumbnail)
